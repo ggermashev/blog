@@ -1,0 +1,19 @@
+.wrap {
+  h3 {
+    margin: 0;
+  }
+  text-align: center;
+}
+
+.articleCard {
+  padding: 20px;
+  border: 5px solid black;
+  width: 200px;
+  min-height: 300px;
+  border-radius: 1em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.2);
+  }
+}
