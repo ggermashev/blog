@@ -26,7 +26,8 @@ class Articles {
         this._articles[ind] = article
     }
 
-    likeArticle(id: number) {
+    likeArticle(id: number | undefined) {
+        if (!id) return;
         const ind = this._articles.findIndex(art => art.id === id)
         this._articles[ind].liked = !this._articles[ind].liked
     }
@@ -37,101 +38,116 @@ class Articles {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
-                liked: false,
-                tags: []
+                img: require('../images/cat.jpg'),
+                liked: true,
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
             {
                 id: Math.round(Math.random() * 1e6),
                 title: "title",
                 content: "content",
-                img: "",
+                img: require('../images/cat.jpg'),
                 liked: false,
-                tags: []
+                tags: [],
+                published: new Date().toDateString(),
             },
         )
     }
 
+    getById(id: number) {
+        return this._articles.find(article => article.id === id)
+    }
 
 }
 

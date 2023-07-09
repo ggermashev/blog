@@ -1,0 +1,54 @@
+.article {
+  position: relative;
+
+  .back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px !important;
+    width: 40px !important;
+
+    &:hover {
+      cursor: pointer;
+      color: lightblue;
+    }
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    position: relative;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .edit {
+      height: 30px;
+      width: 30px;
+      margin-left: 5px;
+
+      &:hover {
+        cursor: pointer;
+        color: lightblue;
+      }
+    }
+
+    .like {
+      height: 30px;
+      width: 30px;
+      margin-right: 5px;
+
+      &:hover {
+        color: red!important;
+        cursor: pointer;
+      }
+    }
+  }
+}

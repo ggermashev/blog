@@ -5,5 +5,6 @@ export interface IArticle {
     content: string,
     img: string,
     liked: boolean,
-    tags: string[]
+    tags: string[],
+    published: string,
 }

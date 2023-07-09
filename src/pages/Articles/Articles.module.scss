@@ -4,14 +4,14 @@
   position: relative;
   .wrap {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 20px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     align-items: start;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 

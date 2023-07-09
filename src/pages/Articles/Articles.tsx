@@ -4,7 +4,7 @@ import articles from "../../store/Articles";
 import ArticleCard from "../../components/ArticleCard/ArticleCard";
 import {observer} from "mobx-react-lite";
 
-const Articles = observer( () => {
+const Articles = observer(() => {
 
     const onVisible = useCallback((isVisible: boolean) => {
         if (isVisible) {
@@ -32,7 +32,10 @@ const Articles = observer( () => {
     return (
         <div className={styles.articles}>
             <div className={styles.wrap}>
-                {articles.articles.map(article => <ArticleCard article={article}/>)}
+                {articles.articles.map(article => <ArticleCard
+                    article={article}
+                    onLike={id => articles.likeArticle(id)}
+                />)}
             </div>
             <div id={"border"} className={styles.border}>
 
