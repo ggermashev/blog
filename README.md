@@ -6,4 +6,4 @@
 - MobX
 - MUI
 
-### https://ggermashev.github.io/blog/articles
+### https://ggermashev.github.io/blog
