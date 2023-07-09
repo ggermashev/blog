@@ -14,16 +14,17 @@ class Articles {
     }
 
     addArticle(article: IArticle) {
-        this._articles.push(article)
+        this._articles.unshift(article)
     }
 
     removeArticle(id: number) {
         this._articles = this._articles.filter(article => article.id !== id)
     }
 
-    editArticle(id: number, article: IArticle) {
+    editArticle(id: number | undefined, article: { title: string, content: string, img: string | undefined }) {
+        if (!id) return;
         const ind = this._articles.findIndex(art => art.id === id)
-        this._articles[ind] = article
+        Object.assign(this._articles[ind], article)
     }
 
     likeArticle(id: number | undefined) {
@@ -40,7 +41,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -49,7 +49,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: true,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -58,7 +57,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -67,7 +65,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -76,7 +73,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -85,7 +81,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -94,7 +89,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -103,7 +97,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -112,7 +105,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -121,7 +113,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -130,7 +121,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
             {
@@ -139,7 +129,6 @@ class Articles {
                 content: "content",
                 img: require('../images/cat.jpg'),
                 liked: false,
-                tags: [],
                 published: new Date().toDateString(),
             },
         )

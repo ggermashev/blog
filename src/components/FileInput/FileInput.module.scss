@@ -1,0 +1,39 @@
+.fileInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    gap: 20px;
+
+    img {
+      height: 100px;
+      width: auto;
+    }
+  }
+
+  .imageWrap {
+    position: relative;
+    padding: 20px;
+  }
+
+  .deleteIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+

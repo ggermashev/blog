@@ -19,6 +19,7 @@ function App() {
                     <Route path={"/article/:id"} element={<Article/>}/>
                     <Route path={"/add-article"} element={<AddArticle/>}/>
                     <Route path={"/auth"} element={<Auth/>}/>
+                    <Route path={"/"} element={<Auth/>}/>
                 </Routes>
             </main>
             <Footer/>

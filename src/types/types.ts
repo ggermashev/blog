@@ -3,8 +3,7 @@ export interface IArticle {
     id: number,
     title: string,
     content: string,
-    img: string,
+    img: string | undefined,
     liked: boolean,
-    tags: string[],
     published: string,
 }
